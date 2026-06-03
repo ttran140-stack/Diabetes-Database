@@ -1,2 +1,2 @@
-# Diabetes-Database
-The analyzing, normalization, and creation of a database through multiple iterations of an online diabetes dataset. Along with SELECT queries as views for the final database.
+# Diabetes Database
+The creation process of a functional database from a real-world health dataset. Proposes reports that documents the iterations and development of a scalable schema with 10 entities that analyzes patient information such as lifestyle factors, genetic information, medical records, and organ functions.
