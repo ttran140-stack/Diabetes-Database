@@ -42,4 +42,20 @@ Proposal report describing the diabetes dataset, intended research purposes, tar
     </li>
   </ul>
   </li>
+ <li>
+      <strong>team_3_diabetes_logical.mwb</strong>
+  <ul>
+    <li>
+      This file is to display the Enhanced-Entity Relationship Model, which shows entitites with their different keys, and views within the database and their relationship to one another. 
+    </li>
+  </ul>
+  </li>
+  <li>
+      <strong>team_3_diabetes_queries.sql</strong>
+  <ul>
+    <li>
+      This file contains all the queries for different views and their explained purposes inside of the database.
+    </li>
+  </ul>
+  </li>
 </ul>
