@@ -94,9 +94,24 @@ Proposal report describing the diabetes dataset, intended research purposes, tar
     </li>
   </ul>
   </li>
+  <li>
+      <strong>README_images</strong>
+  <ul>
+    <li>
+      This folder contains all of the images (4 images) used in this README.
+    </li>
+  </ul>
+  </li>
+  <li>
+      <strong>diabetes_dataset.xlsx</strong>
+  <ul>
+    <li>
+      This Microsoft Excel Spreadsheets file shows the original dataset, and also the final cleaned dataset that's used in the database as well. It also shows all of the other sheets that were used to downlaod and import into the actual MySQL database.
+    </li>
+  </ul>
+  </li>
 </ul>
 <br>
-
 
 <h2>🗄️ Database Structure</h2>
 <p>Entites within the database include:</p>
@@ -113,11 +128,12 @@ Proposal report describing the diabetes dataset, intended research purposes, tar
  <li>targets --> IDs of different targets (patients)</li>
 </ul>
 
+<img src="README_images/ERDfinal.png" alt="Picture of Diabetes Database ERD">
 
 <p>The diabetes database contains ten tables with targets being the main table. The targets table has a one to many relationship with four other tables; the target_genetics, target_organ_functions, target_lifestyles, and target_medical_history tables. These four tables are all linking tables, and have a many to one relationship with its corresponding tables; genetics, organ_functions, lifestyle, and medical_history tables. This means that the targets table has a many to many relationship with genetics, organ_functions, lifestyle, and medical_history. The final table, diagnosis, has a one to many relationship with targets, as many targets can share the same diagnosis.</p>
 <br>
 
-<h2>SQL Sample Queries</h2>
+<h2>🔍 SQL Sample Queries</h2>
 <p>(First 15 rows)</p>
 <ul>
  <li>Example Query 1: Targets older than the average age of their diagnosis group<br>
@@ -131,7 +147,7 @@ WHERE t.age > (
     WHERE t2.diagnosis_id = t.diagnosis_id
 );
 </pre>
-
+<img src="README_images/Screenshot 2026-06-06 134932.png" alt="Picture of Results for Example Query 1">
  </li>
  
  <li>Example Query 2: Count of positive genetic testing results per diagnosis<br>
@@ -143,7 +159,7 @@ JOIN target_genetics tg ON t.target_id = tg.target_id
 WHERE tg.genetics_id = 4 AND tg.genetic_value = 'Positive'
 GROUP BY d.diagnosis_name;
  </pre>
-  
+  <img src="README_images/Screenshot 2026-06-06 135139.png" alt="Picture of Results for Example Query 2">
  </li>
  
 <li>Example Query 3: Count of targets per diagnosis with average age<br>
@@ -152,10 +168,9 @@ GROUP BY d.diagnosis_name;
        AVG(t.age) AS avg_age
 FROM diagnosis d
 JOIN targets t ON d.diagnosis_id = t.diagnosis_id
-GROUP BY d.diagnosis_name
-HAVING AVG(t.age) > 25;
+GROUP BY d.diagnosis_name;
 </pre>
- 
+<img src="README_images/Screenshot 2026-06-06 142024.png" alt="Picture of Result for Example Query 3">
 </li>
 </ul>
 <p>Within the team_3_diabetes_queries.sql file, there are <b>3</b> other sample queries.</p>
