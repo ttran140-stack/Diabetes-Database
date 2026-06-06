@@ -5,7 +5,17 @@ The creation process of a functional database from a real-world health dataset. 
 
 The goal of this project was to apply database design principles, normalization techniques, and SQL querying skills to create an efficient schema capable of storing healthcare data while supporting meaningful analysis and reporting.
     </p>
+<br>    
 
+<h2>🎯 Project Objectives</h2>
+<ul>
+ <li>Create entities in alignment of the columns in dataset</li>
+ <li>Design a logical schema and ERD</li>
+ <li>Implement a database that contains data from the dataset</li>
+ <li>Develop queries that show research and database capabilities</li>
+ <li>Document design process from multiple design iterations</li>
+</ul>
+<br>
 
 <h2>📁 Repository Structure</h2>
 
@@ -59,7 +69,7 @@ Proposal report describing the diabetes dataset, intended research purposes, tar
   </ul>
   </li>
 </ul>
-
+<br>
 
 <h2>📋 How to Access the Database/Entity Relationship Diagram</h2>
 <ol>
