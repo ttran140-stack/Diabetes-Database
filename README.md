@@ -3,7 +3,7 @@
 <p>
 The creation process of a functional database from a real-world health dataset. This project documents the design and development of a scalable relational database schema consisting of 10 entities used to analyze patient information, including lifestyle factors, genetic information, medical records, and organ function data. <br>
 
-The goal of this project was to apply database design principles, normalization techniques, and SQL querying skills to create an efficient schema capable of storing healthcare data while supporting meaningful analysis and reporting.
+The goal of this project was to apply database design principles and techniques, normalization techniques, and SQL querying skills to create an efficient schema capable of storing healthcare data while supporting meaningful analysis and reporting.
     </p>
 <br>    
 
@@ -28,6 +28,19 @@ The goal of this project was to apply database design principles, normalization 
  <li>Refining and Testing database</li>
 </ol>
 <br>
+
+<h2>🧠 Skills Demonstrated</h2>
+<ol>
+ <li>SQL/MySQL Workbench</li>
+ <li>Database Design</li>
+ <li>Data Analysis</li>
+ <li>Schema Development</li>
+ <li>Database Normalization</li>
+ <li>Data Cleaning</li>
+ <li>Spreadsheets</li>
+ <li>Data Management</li>
+ <li>Technical Writing</li>
+</ol>
 
 
 <h2>📁 Repository Structure</h2>
@@ -84,6 +97,43 @@ Proposal report describing the diabetes dataset, intended research purposes, tar
 </ul>
 <br>
 
+
+<h2>🗄️ Database Structure</h2>
+<p>Entites within the database include:</p>
+<ul>
+ <li><b>diagnosis</b> --> Different types of diagnoses</li>
+ <li>genetics --> Different genetics tests</li>
+ <li>lifestyle --> Different lifestyle factors</li>
+ <li>medical history --> Different medical tests</li>
+ <li>organ functions --> Different organ functionality tests</li>
+ <li>targets genetics --> Genetic test results of different targets</li>
+ <li>targets lifestyle --> Lifestyle factors of different targets</li>
+ <li>targets_medical_history --> Medical test results of different targets</li>
+ <li>targets_organ_functions --> Organ function tests results of different targets</li>
+ <li>targets --> IDs of different targets (patients)</li>
+</ul>
+
+
+<p>The diabetes database contains ten tables with targets being the main table. The targets table has a one to many relationship with four other tables; the target_genetics, target_organ_functions, target_lifestyles, and target_medical_history tables. These four tables are all linking tables, and have a many to one relationship with its corresponding tables; genetics, organ_functions, lifestyle, and medical_history tables. This means that the targets table has a many to many relationship with genetics, organ_functions, lifestyle, and medical_history. The final table, diagnosis, has a one to many relationship with targets, as many targets can share the same diagnosis.</p>
+<br>
+
+<h2>SQL Sample Queries</h2>
+<ul>
+ <li>Example Query 1:<br>
+ 
+ </li>
+ <li>Example Query 2:<br>
+ 
+ </li>
+ 
+<li>Example Query 3:<br>
+
+</li>
+</ul>
+<p>Within the team_3_diabetes_queries.sql file, there are <b>3</b> other sample queries.</p>
+
+
+
 <h2>📋 How to Access the Database/Entity Relationship Diagram</h2>
 <ol>
   <li><strong>Install MySQl Workbench</strong></li>
@@ -110,6 +160,4 @@ Proposal report describing the diabetes dataset, intended research purposes, tar
   </ul>
  </li>
 </ol>
-<br>
-
 
