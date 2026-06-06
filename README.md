@@ -17,6 +17,19 @@ The goal of this project was to apply database design principles, normalization 
 </ul>
 <br>
 
+<h2>🛠️ Design Process</h2>
+<ol>
+ <li>Initial proposal and entity identification</li>
+ <li></li>Logical schema development</li>
+ <li>Normalization of schema to reduce redundancy, prevent anomalies, and maintain integrity</li>
+ <li>ERD creation</li>
+ <li>Physical database development</li>
+ <li>Query/View development</li>
+ <li>Refining and Testing database</li>
+</ol>
+<br>
+
+
 <h2>📁 Repository Structure</h2>
 
 <ul>
@@ -97,3 +110,6 @@ Proposal report describing the diabetes dataset, intended research purposes, tar
   </ul>
  </li>
 </ol>
+<br>
+
+
