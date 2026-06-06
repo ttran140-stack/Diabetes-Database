@@ -118,16 +118,44 @@ Proposal report describing the diabetes dataset, intended research purposes, tar
 <br>
 
 <h2>SQL Sample Queries</h2>
+<p>(First 15 rows)</p>
 <ul>
- <li>Example Query 1:<br>
- 
- </li>
- <li>Example Query 2:<br>
- 
- </li>
- 
-<li>Example Query 3:<br>
+ <li>Example Query 1: Targets older than the average age of their diagnosis group<br>
+<pre> 
+SELECT t.target_id, t.age, d.diagnosis_name
+FROM targets t
+JOIN diagnosis d ON t.diagnosis_id = d.diagnosis_id
+WHERE t.age > (
+    SELECT AVG(t2.age)
+    FROM targets t2
+    WHERE t2.diagnosis_id = t.diagnosis_id
+);
+</pre>
 
+ </li>
+ 
+ <li>Example Query 2: Count of positive genetic testing results per diagnosis<br>
+ <pre> 
+ SELECT d.diagnosis_name, COUNT(t.target_id) AS positive_test_count
+FROM targets t
+JOIN diagnosis d ON t.diagnosis_id = d.diagnosis_id
+JOIN target_genetics tg ON t.target_id = tg.target_id
+WHERE tg.genetics_id = 4 AND tg.genetic_value = 'Positive'
+GROUP BY d.diagnosis_name;
+ </pre>
+  
+ </li>
+ 
+<li>Example Query 3: Count of targets per diagnosis with average age<br>
+<pre>
+ SELECT d.diagnosis_name, COUNT(t.target_id) AS target_count, 
+       AVG(t.age) AS avg_age
+FROM diagnosis d
+JOIN targets t ON d.diagnosis_id = t.diagnosis_id
+GROUP BY d.diagnosis_name
+HAVING AVG(t.age) > 25;
+</pre>
+ 
 </li>
 </ul>
 <p>Within the team_3_diabetes_queries.sql file, there are <b>3</b> other sample queries.</p>
