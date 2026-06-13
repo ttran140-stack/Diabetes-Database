@@ -1,4 +1,7 @@
- <h1>🩺 Diabetes Database</h1>
+ <h1 align="center">🩺 Diabetes Database</h1>
+ <p align="center"><b>A real functional relational healthcare diabetes database</b></p>
+ <p align="center">Developed with <br> MySQL Workbech • Microsoft Excel</p>
+ <br>
 
 <p>
 The creation process of a functional database from a real-world health dataset. This project documents the design and development of a scalable relational database schema consisting of 10 entities used to analyze patient information, including lifestyle factors, genetic information, medical records, and organ function data. <br>
